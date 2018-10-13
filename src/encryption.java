@@ -7,13 +7,27 @@
  * for encrypting text
  */
 
+/*
+ * Java has a few inbuilt data types used to certain certain types of data The following are
+ * examples of common data types used: 1. Int: This type is used to store integer values 2. String:
+ * This type is used to store a string of letters and special characters 3. Char: This type is used
+ * to store a single character only, mostly letters
+ */
+
+// When doing calculations Java observes operator precedence.
+/*
+ * This means that java specifies the order in which the operators in a calculation are evaluated
+ * when the calculation has several operators
+ */
+
+import java.util.Random;
 import java.util.Scanner;
 
 public class encryption {
 
   // This is the encrypting method with two parameters of type String and int
-  // The method header is the line of code before the opening curly braces of the class
-  public static String encrypt(String plainText, int shift) {
+  // The method header is the line of code before the opening curly braces of the method
+  public static String encrypt(String text, int shift) {
     // Consider that there are 26 letters in the alphabet
     // The if/else statements check that the key entered is between 0 and 26 inclusive
     if (shift > 26) {
@@ -24,11 +38,11 @@ public class encryption {
     String cipherText = "";
     // Initialize a variable to store the length of the string input
     // .length() is a string method used to return the length of a string
-    int length = plainText.length();
+    int length = text.length();
     for (int i = 0; i < length; i++) {
       // charAt() is a string method used to check the character of a string at the specified index
       // The index is determined by the argument passed into the methods parameter i.e ();
-      char character = plainText.charAt(i);
+      char character = text.charAt(i);
       /*
        * The if statement below checks if the character at each index is a letter If it is not a
        * letter the program doesn't change it and goes to the next index
@@ -46,15 +60,18 @@ public class encryption {
            * the last count is done
            */
           if (shiftedChar > 'z') {
+            // The code below casts the result into a character
             cipherText += (char) (character - (26 - shift));
           } else {
             cipherText += shiftedChar;
           }
         }
-        // This else if statement does the same function as the one above for upper case letters.
+        // This else if statement below does the same function as the one above for upper case
+        // letters.
         else if (Character.isUpperCase(character)) {
           char shiftedChar = (char) (character + shift);
           if (shiftedChar > 'Z') {
+            // The code below casts the result into a character
             cipherText += (char) (character - (26 - shift));
           } else {
             cipherText += shiftedChar;
@@ -70,14 +87,19 @@ public class encryption {
   public static void main(String[] args) {
     // The code below creates a new object from the scanner class to allow for user input
     Scanner input = new Scanner(System.in);
-    System.out.println("Input your text:");
+    System.out.println("Input your text: ");
     String inputText = input.nextLine();
-    System.out.println("Input your key:");
+
+    Random randomKey = new Random();
+    System.out.println("Generated key: \n" + randomKey.nextInt(27));
+
+    System.out.println("Input the generated key: ");
     int key = input.nextInt();
     // The user input text and key will be passed as an argument to the method encrypt.
     String cipherText = encrypt(inputText, key);
     // The output for the result it made.
-    System.out.println(cipherText);
+    System.out.println("Encrypted text: \n" + cipherText);
+
   }
 
 }
