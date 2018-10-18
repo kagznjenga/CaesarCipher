@@ -22,6 +22,7 @@
 
 import java.util.Random;
 import java.util.Scanner;
+import javax.crypto.KeyGenerator;
 
 public class encryption {
 
@@ -83,18 +84,23 @@ public class encryption {
     }
     return cipherText;
   }
+  
+  public static int keyGenerator() {
+    Random randomKey = new Random();
+    //
+    final int key = randomKey.nextInt(27);
+    return key;
+  }
 
   public static void main(String[] args) {
     // The code below creates a new object from the scanner class to allow for user input
     Scanner input = new Scanner(System.in);
     System.out.println("Input your text: ");
     String inputText = input.nextLine();
-
-    Random randomKey = new Random();
-    System.out.println("Generated key: \n" + randomKey.nextInt(27));
-
-    System.out.println("Input the generated key: ");
-    int key = input.nextInt();
+    
+    int key = keyGenerator();
+    System.out.println("Key generated: \n" + key);
+    
     // The user input text and key will be passed as an argument to the method encrypt.
     String cipherText = encrypt(inputText, key);
     // The output for the result it made.

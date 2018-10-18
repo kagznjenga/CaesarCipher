@@ -93,6 +93,7 @@ public class decryption {
     String inputText = input.nextLine();
 
     System.out.println("Input your key(numbers only): ");
+    // The final keyword
     int key = input.nextInt();
     // The user input text and key will be passed as an argument to the method decrypt.
     String decipherdText = decrypt(inputText, key);
