@@ -113,7 +113,7 @@ public class Encryption {
   }
   
   public int getKey() {
-    return 
+    return key;
   }
 
 }

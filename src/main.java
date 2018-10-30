@@ -13,7 +13,7 @@ public class main {
     keyGenerator.keyGenerator();
     
     // The user input text and key will be passed as an argument to the method encrypt.
-    String cipherText = encrypt(inputText, key);
+    String cipherText = encrypt(inputText, keyGenerator);
     // The output for the result it made.
     System.out.println("Encrypted text: \n" + cipherText);
     
