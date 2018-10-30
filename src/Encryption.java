@@ -24,36 +24,50 @@ import java.util.Random;
 import java.util.Scanner;
 import javax.crypto.KeyGenerator;
 
-public class encryption {
+public class Encryption {
+  
+  private int key;
 
   // This is the encrypting method with two parameters of type String and int
   // The method header is the line of code before the opening curly braces of the method
+  
   public static String encrypt(String text, int shift) {
+    
     // Consider that there are 26 letters in the alphabet
     // The if/else statements check that the key entered is between 0 and 26 inclusive
+    
     if (shift > 26) {
       shift = shift % 26;
     } else if (shift < 0) {
       shift = (shift % 26) + 26;
     }
     String cipherText = "";
+    
     // Initialize a variable to store the length of the string input
     // .length() is a string method used to return the length of a string
+    
     int length = text.length();
     for (int i = 0; i < length; i++) {
+      
       // charAt() is a string method used to check the character of a string at the specified index
       // The index is determined by the argument passed into the methods parameter i.e ();
+      
       char character = text.charAt(i);
       /*
        * The if statement below checks if the character at each index is a letter If it is not a
        * letter the program doesn't change it and goes to the next index
        */
       // .isLetter() is a string method that checks if the character at an index is a letter.
+      
       if (Character.isLetter(character)) {
+        
         // The inner if/else statement checks if the letter is uppercase or lowercase.
         // The letters have different decimal value ranges depending on its case.
+        
         if (Character.isLowerCase(character)) {
+          
           // The code below casts the result of the addition into a character
+          
           char shiftedChar = (char) (character + shift);
           /*
            * The if/else statement below checks if the character shift is out of bounds in the lower
@@ -61,18 +75,23 @@ public class encryption {
            * the last count is done
            */
           if (shiftedChar > 'z') {
+            
             // The code below casts the result into a character
+            
             cipherText += (char) (character - (26 - shift));
           } else {
             cipherText += shiftedChar;
           }
         }
-        // This else if statement below does the same function as the one above for upper case
-        // letters.
+        
+        // This else if statement below does the same function as the one above for upper case letters.
+        
         else if (Character.isUpperCase(character)) {
           char shiftedChar = (char) (character + shift);
           if (shiftedChar > 'Z') {
+            
             // The code below casts the result into a character
+            
             cipherText += (char) (character - (26 - shift));
           } else {
             cipherText += shiftedChar;
@@ -85,27 +104,16 @@ public class encryption {
     return cipherText;
   }
   
-  public static int keyGenerator() {
+  public void keyGenerator() {
     Random randomKey = new Random();
-    //
-    final int key = randomKey.nextInt(27);
-    return key;
+    
+  //The final keyword sets the final, permanent value of the variable
+    
+    System.out.println("Key generated: \n" + ;
   }
-
-  public static void main(String[] args) {
-    // The code below creates a new object from the scanner class to allow for user input
-    Scanner input = new Scanner(System.in);
-    System.out.println("Input your text: ");
-    String inputText = input.nextLine();
-    
-    int key = keyGenerator();
-    System.out.println("Key generated: \n" + key);
-    
-    // The user input text and key will be passed as an argument to the method encrypt.
-    String cipherText = encrypt(inputText, key);
-    // The output for the result it made.
-    System.out.println("Encrypted text: \n" + cipherText);
-
+  
+  public int getKey() {
+    return 
   }
 
 }
