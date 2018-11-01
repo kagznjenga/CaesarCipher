@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class main {
+public class Main {
 
   public static void main(String[] args) {
     
@@ -9,13 +9,11 @@ public class main {
     System.out.println("Input your text: ");
     String inputText = input.nextLine();
     
-    Encryption keyGenerator = new Encryption();
-    keyGenerator.keyGenerator();
+    Encryption encryptingKey = new Encryption();
+    encryptingKey.keyGenerator();
     
     // The user input text and key will be passed as an argument to the method encrypt.
-    String cipherText = encrypt(inputText, keyGenerator);
-    // The output for the result it made.
-    System.out.println("Encrypted text: \n" + cipherText);
+    
     
     /*
     // The code below creates a new object from the scanner class to allow for user input

@@ -26,12 +26,14 @@ import javax.crypto.KeyGenerator;
 
 public class Encryption {
   
+  //The final keyword sets the final, permanent value of the variable
   private int key;
-
-  // This is the encrypting method with two parameters of type String and int
+  private String cipherText;
+  
+  // This is the encrypting method with two parameters of type String and integer
   // The method header is the line of code before the opening curly braces of the method
   
-  public static String encrypt(String text, int shift) {
+  public encrypt(String text, int shift) {
     
     // Consider that there are 26 letters in the alphabet
     // The if/else statements check that the key entered is between 0 and 26 inclusive
@@ -101,19 +103,17 @@ public class Encryption {
         cipherText += character;
       }
     }
-    return cipherText;
-  }
-  
-  public void keyGenerator() {
-    Random randomKey = new Random();
-    
-  //The final keyword sets the final, permanent value of the variable
-    
-    System.out.println("Key generated: \n" + ;
+    this.cipherText = cipherText;
   }
   
   public int getKey() {
     return key;
+  }
+  
+  public void keyGenerator() {
+    Random randomKey = new Random();
+    int randomNumber = randomKey.nextInt(getKey());
+    System.out.println("Key generated: \n" + randomNumber);
   }
 
 }
