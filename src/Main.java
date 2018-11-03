@@ -4,6 +4,11 @@ public class Main {
 
   public static void main(String[] args) {
     
+    System.out.println("Welcome to this caesar cipher program!\n"
+        + "A caesar cipher shifts each letter in the plaintext a certain number of places down the alphabet\n"
+        + "The number of places shifted depends on the key used, which is simply a numeric value\n"
+        + "To encrypt you will need to input text for encrypting and then use the key generated to decrypt the text.\n");
+    
     // The code below creates a new object from the scanner class to allow for user input
     Scanner input = new Scanner(System.in);
     System.out.println("Input your text: ");
@@ -36,10 +41,10 @@ public class Main {
       String originalText = Decryption.decrypt(encryptedText, inputKeyNum2);
       
       // Prints out the decoded text
-      System.out.println("The decrypted text is: \n" + originalText);
+      System.out.println("The decrypted text is:\n " + originalText);
     }
     else {
-      System.out.println("Text still encrypted: " + encryptedText);
+      System.out.println("The original text is still encrypted:\n " + encryptedText);
     }
     
   }
