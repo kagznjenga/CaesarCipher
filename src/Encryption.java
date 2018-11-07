@@ -7,13 +7,6 @@
  * for encrypting text
  */
 
-/*
- * Java has a few inbuilt data types used to certain certain types of data The following are
- * examples of common data types used: 1. Int: This type is used to store integer values 2. String:
- * This type is used to store a string of letters and special characters 3. Char: This type is used
- * to store a single character only, mostly letters
- */
-
 // When doing calculations Java observes operator precedence.
 /*
  * This means that java specifies the order in which the operators in a calculation are evaluated
