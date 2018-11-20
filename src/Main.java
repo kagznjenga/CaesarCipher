@@ -10,13 +10,13 @@
  * 7. boolean: The boolean data type has only two possible values: true and false.
  * 8. char: The char data type is a single 16-bit Unicode character. It has a minimum value of '\u0000' (or 0) and a maximum value of '\uffff' (or 65,535 inclusive).
  */
-
+ 
 import java.util.Scanner;
 
 public class Main {
 
   public static void main(String[] args) {
-    
+    /*
     System.out.println("Welcome to this caesar cipher program!\n"
         + "A caesar cipher shifts each letter in the plaintext a certain number of places down the alphabet\n"
         + "The number of places shifted depends on the key used, which is simply a numeric value\n"
@@ -59,7 +59,9 @@ public class Main {
     else {
       System.out.println("The original text is still encrypted:\n " + encryptedText);
     }
+    */
+    Arrays.arrayDemo();
     
   }
-
+  
 }
