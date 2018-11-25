@@ -2,8 +2,9 @@ import java.util.*;
 
 public class ExtraRequirements {
 
-  public static void main(String[] args) {
+  public static void main(String[] args){
     Scanner input = new Scanner(System.in);
+    /*
     System.out.println("Is this statement true or false?\n"
         + "The sky is blue:");
     boolean myBoolean = input.nextBoolean();
@@ -19,7 +20,7 @@ public class ExtraRequirements {
     /*The code below casts the result of the division of the integer input to a double data type
      *Type casting is a way to convert a variable from one data type to another data type.
      */
-
+    /*
     double myDouble = (double) myInt / 10;
     System.out.println("Your double value is:\n" + myDouble);
     
@@ -71,6 +72,7 @@ public class ExtraRequirements {
      *When used with objects, the == operator compares the two object references and determines whether they refer to the same instance.
      *For that reason we will use equals(), which is a method available in the String class that is used to compare two strings and determine whether they are equal.
      **/
+    /*
     System.out.println("\nInput first word:");
     String text1 = input.nextLine();
     System.out.println("Input second word:");
@@ -82,6 +84,22 @@ public class ExtraRequirements {
     else {
       System.out.println("The two strings are not equal");
     }
+    */
+    //The break statement terminates the loop immediately, and the control of the program moves to the next statement following the loop.
+    //The continue statement skips the current iteration of a loop.
+    System.out.println("This is a do/while loop that implements the break statement"
+        + "\nIt executes and prints the counter as long as it is less than 11"
+        + "\nThe break statement stops execution when the counter is greater than 5"
+        + "\nSince this is a do/while loop you will have an additional execution");
+    int counter = 1;
+    do {
+      System.out.println("Counter = " + counter);
+      if(counter > 5) {
+        break;
+      }
+      counter++;
+    }while(counter < 11);
+    System.out.println("This is the end of the loop");
   }
 
 }

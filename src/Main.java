@@ -59,9 +59,13 @@ public class Main {
     else {
       System.out.println("The original text is still encrypted:\n " + encryptedText);
     }
-    */
-    Arrays.arrayDemo();
     
+    Arrays.arrayDemo();
+    */
+    Machine machine1 = new Machine("Toyota", 2016, "Camry");
+    Car1 vehicle = new Car1("Toyota", 2016, "Camry");
+    machine1 = vehicle;
+    new Machine();
   }
   
 }
