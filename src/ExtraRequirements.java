@@ -2,9 +2,9 @@ import java.util.*;
 
 public class ExtraRequirements {
 
-  public static void main(String[] args){
+  public static void extra(){
+    System.out.println("\nAdditional short programs:\n");
     Scanner input = new Scanner(System.in);
-    /*
     System.out.println("Is this statement true or false?\n"
         + "The sky is blue:");
     boolean myBoolean = input.nextBoolean();
@@ -14,14 +14,13 @@ public class ExtraRequirements {
     else {
       System.out.println("You're awesome");
     }
-    System.out.println("\nEnter an integer value that will be converted to a double type when divided by 10:");
+    System.out.println("\nEnter an integer value that will be converted to a double type when divided by 100:");
     int myInt = input.nextInt();
     
     /*The code below casts the result of the division of the integer input to a double data type
      *Type casting is a way to convert a variable from one data type to another data type.
      */
-    /*
-    double myDouble = (double) myInt / 10;
+    double myDouble = (double) myInt / 100;
     System.out.println("Your double value is:\n" + myDouble);
     
     System.out.println("\nEnter your base number(Integer)");
@@ -32,7 +31,7 @@ public class ExtraRequirements {
     System.out.println("Your number " +myBase + " raised to the power of " +myExponent
         + " equals: " + Math.pow(myBase, myExponent));
     
-    System.out.println("Enter your height rounded to the nearest whole number in meters: ");
+    System.out.println("\nEnter your height rounded to the nearest whole number in meters: ");
     int height = input.nextInt();
        
     switch(height) {
@@ -51,6 +50,7 @@ public class ExtraRequirements {
     }
     
     System.out.println("\nInput first word:");
+    input.nextLine();
     String str1 = input.nextLine();
     System.out.println("Input second word:");
     String str2 = input.nextLine();
@@ -72,7 +72,7 @@ public class ExtraRequirements {
      *When used with objects, the == operator compares the two object references and determines whether they refer to the same instance.
      *For that reason we will use equals(), which is a method available in the String class that is used to compare two strings and determine whether they are equal.
      **/
-    /*
+    
     System.out.println("\nInput first word:");
     String text1 = input.nextLine();
     System.out.println("Input second word:");
@@ -82,24 +82,43 @@ public class ExtraRequirements {
       System.out.println("The two strings are equal.");
     }
     else {
-      System.out.println("The two strings are not equal");
+      System.out.println("The two strings are not equal\n");
     }
-    */
+    
     //The break statement terminates the loop immediately, and the control of the program moves to the next statement following the loop.
     //The continue statement skips the current iteration of a loop.
-    System.out.println("This is a do/while loop that implements the break statement"
+    System.out.println("The next part is a do/while loop that implements the break statement"
         + "\nIt executes and prints the counter as long as it is less than 11"
         + "\nThe break statement stops execution when the counter is greater than 5"
         + "\nSince this is a do/while loop you will have an additional execution");
     int counter = 1;
+    int counter2 = 1;
     do {
       System.out.println("Counter = " + counter);
       if(counter > 5) {
         break;
       }
       counter++;
-    }while(counter < 11);
-    System.out.println("This is the end of the loop");
+    } while(counter < 11);
+    System.out.println("\nThis is the end of the loop.\n");
+    
+    System.out.println("The next loop is a for loop that implements the continue statement"
+        + "\nThe continue statement skips the current iteration of a loop"
+        + "\nWhen the continue statement is executed, control of the program jumps to the end of the loop. "
+        + "\nThen, the test expression that controls the loop is evaluated"
+        + "The program exits the loop when the counter value is equal to 10"
+        + "\n(Notice that there are some numbers missing)");
+    
+    for(int i=1;i<10;i++)
+    {
+        if (i >= 4 && i <= 6)
+        {
+            continue;
+        }
+        System.out.println(i);
+    }
+    System.out.println("\nThis is the end of the loop.");
+    
   }
 
 }
