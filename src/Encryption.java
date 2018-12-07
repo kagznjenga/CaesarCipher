@@ -25,12 +25,14 @@ public class Encryption {
     
   }
   
-  //This is the encrypting constructor with two parameters of type String and integer
-  // The method header is the line of code before the opening curly braces of the method
+  /*This is the encrypting constructor with two parameters of type String and integer
+   * The method header is the line of code before the opening curly braces of the method
+   */
   public Encryption(String text, int shift) {
     
-    // Consider that there are 26 letters in the alphabet
-    // The if/else statements check that the key entered is between 0 and 26 inclusive
+    /* Consider that there are 26 letters in the alphabet
+     * The if/else statements check that the key entered is between 0 and 26 inclusive
+     */
     
     if (shift > 26) {
       shift = shift % 26;
@@ -39,8 +41,9 @@ public class Encryption {
     }
     String cipherText = "";
     
-    // Initialize a variable to store the length of the string input
-    // .length() is a string method used to return the length of a string
+    /* Initialize a variable to store the length of the string input
+     * .length() is a string method used to return the length of a string
+     */
     
     int length = text.length();
     for (int i = 0; i < length; i++) {
@@ -57,12 +60,13 @@ public class Encryption {
       
       if (Character.isLetter(character)) {
         
-        // The inner if/else statement checks if the letter is uppercase or lowercase.
-        // The letters have different decimal value ranges depending on its case.
+        /* The inner if/else statement checks if the letter is uppercase or lowercase.
+         * The letters have different decimal value ranges depending on its case.
+         */
         
         if (Character.isLowerCase(character)) {
           
-          // The code below casts the result of the addition into a character
+          /* The code below casts the result of the addition into a character*/
           
           char shiftedChar = (char) (character + shift);
           /*
@@ -80,7 +84,9 @@ public class Encryption {
           }
         }
         
-        // This else if statement below does the same function as the one above for upper case letters.
+        /* This else if statement below does the same function as 
+         * the one above for upper case letters.
+         */
         
         else if (Character.isUpperCase(character)) {
           char shiftedChar = (char) (character + shift);
