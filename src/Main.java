@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
 
   public static void main(String[] args) {
-
+    
     System.out.println("Welcome to this caesar cipher program!\n"
         + "A caesar cipher shifts each letter in the plaintext a certain "
         + "number of places down the alphabet\n"

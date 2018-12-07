@@ -1,6 +1,7 @@
 
 public class Notes {
   public static void printNotes() {
+    
     System.out.println("* Java has various inbuilt data types. \r\n" + 
         " * A data type is a set of values and a set of operations defined on them.\r\n" + 
         " * The 8 main data types are:\r\n" + 
