@@ -1,23 +1,7 @@
-/*
- * Java has various inbuilt data types. 
- * A data type is a set of values and a set of operations defined on them.
- * The 8 main data types are:
- * 1. byte: The byte data type is an 8-bit signed two's complement integer. 
- * It has a minimum value of -128 and a maximum value of 127 (inclusive).
- * 2. short: The short data type is a 16-bit signed two's complement integer. 
- * It has a minimum value of -32,768 and a maximum value of 32,767 (inclusive).
- * 3. int: By default, the int data type is a 32-bit signed two's complement integer, 
- * which has a minimum value of -231 and a maximum value of 231-1.
- * 4. long: The long data type is a 64-bit two's complement integer. 
- * The signed long has a minimum value of -263 and a maximum value of 263-1.
- * 5. float: The float data type is a single-precision 32-bit IEEE 754 floating point. 
- * Its range of values is beyond the scope of this discussion
- * 6. double: The double data type is a double-precision 64-bit IEEE 754 floating point. 
- * Its range of values is beyond the scope of this discussion. For decimal values, 
- * this data type is generally the default choice.
- * 7. boolean: The boolean data type has only two possible values: true and false.
- * 8. char: The char data type is a single 16-bit Unicode character. 
- * It has a minimum value of '\u0000' (or 0) and a maximum value of '\uffff' (or 65,535 inclusive).
+/*/* Programmer's Name: Samuel Njenga
+ * 
+ * This is the main program where all other programs are executed
+ * There is also some additional notes included
  */
 
 import java.util.Scanner;
@@ -25,7 +9,7 @@ import java.util.Scanner;
 public class Main {
 
   public static void main(String[] args) {
-    
+
     System.out.println("Welcome to this caesar cipher program!\n"
         + "A caesar cipher shifts each letter in the plaintext a certain "
         + "number of places down the alphabet\n"
@@ -110,12 +94,12 @@ public class Main {
 
     Arrays.arrayDemo();
     ExtraRequirements.extra();
-    
+
     System.out.println("\nThis part of the program simply demonstrates polymorphism in java.\n"
         + "Viewing the source courde will make more sense of how this feature was implemented.");
     Plant plant1 = new Plant();
     Tree tree = new Tree();
-    
+
     Plant plant2 = tree;
     System.out.println();
     plant1.grow();
