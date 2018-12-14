@@ -19,6 +19,9 @@ public class Vehicle {
   }
 
 
+  /**
+   * @param ignition
+   */
   public static void startVehicle(boolean ignition) {
     if (ignition) {
       System.out.println("Machine is on.");

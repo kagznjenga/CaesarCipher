@@ -14,14 +14,21 @@
  * when the calculation has several operators
  */
 
-import java.util.Scanner;
-
 public class Decryption {
 
   /*This is the decrypting method with two parameters of type String and int
    * The method header is the line of code before the opening curly braces of the method
    */
 
+  /**Main method with string return type.
+   * @param text
+   * First parameter.
+   * 
+   * @param shift
+   * Second parameter.
+   * 
+   * @return decrypted text
+   */
   public static String decrypt(String text, int shift) {
 
     /*Consider that there are 26 letters in the alphabet
@@ -81,10 +88,12 @@ public class Decryption {
 
             cipherText += shiftedChar;
           }
-        }
-        // This else if statement below does the same function as the one above for upper case letters.
 
-        else if (Character.isUpperCase(character)) {
+          /* This else if statement below does the same function 
+           * as the one above for upper case letters.
+           */
+
+        } else if (Character.isUpperCase(character)) {
 
           // The code below casts the result into a character
 

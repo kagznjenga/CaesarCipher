@@ -2,26 +2,49 @@
 
 /* This program contains code that tests various skills
  * learnt in the programming class */
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ExtraRequirements {
 
   /* The main method of the program*/
+  /**
+   * Main method with no parameters.
+   */
   public static void extra() {
-    System.out.println("\nAdditional short programs:\n");
+    System.out.println("\nThe following is a series of short programs that "
+        + "implement various features of Java:\n");
+
     Scanner input = new Scanner(System.in);
+    System.out.println("\nTESTING BOOLEAN FROM USER INPUT:\n");
     System.out.println("Is this statement true or false?\n"
         + "The sky is blue:");
-    boolean myBoolean = input.nextBoolean();
+    boolean myBoolean = false;
+
+    ////try-catch block
+    try {
+      myBoolean = input.nextBoolean();
+    } catch (InputMismatchException e) {
+      System.out.println("\nThe value you entered is in invalid format.\n");
+    }
+
     if (myBoolean != true) {
       System.out.println("You don't mean that! Haha");
-    }
-    else {
+    } else {
       System.out.println("You're awesome");
     }
-    System.out.println("\nEnter an integer value that will be converted to a double type "
+
+    System.out.println("\nPARSING DATA TYPES:\n");
+    System.out.println("Enter an integer value that will be converted to a double type "
         + "when divided by 100:");
-    int myInt = input.nextInt();
+    int myInt = 0;
+
+    ////try-catch block
+    try {
+      myInt = input.nextInt();
+    } catch (InputMismatchException e) {
+      System.out.println("\nThe value you entered is in invalid format.\n");
+    }
 
     /*The code below casts the result of the division of the integer input to a double data type
      *Type casting is a way to convert a variable from one data type to another data type.
@@ -30,15 +53,38 @@ public class ExtraRequirements {
     System.out.println("Your double value is:\n" + myDouble);
 
     System.out.println("\nEnter your base number(Integer)");
-    int myBase = input.nextInt();
+    int myBase = 0;
+
+    //try-catch block
+    try {
+      myBase = input.nextInt();
+    } catch (InputMismatchException e) {
+      System.out.println("\nThe value you entered is in invalid format.\n");
+    }
+
     System.out.println("Enter your exponent number(Integer)");
-    int myExponent = input.nextInt();
+    int myExponent = 0;
+
+    //try-catch block
+    try {
+      myExponent = input.nextInt();
+    } catch (InputMismatchException e) {
+      System.out.println("\nThe value you entered is in invalid format.\n");
+    }
 
     System.out.println("Your number " + myBase + " raised to the power of " + myExponent
         + " equals: " + Math.pow(myBase, myExponent));
 
-    System.out.println("\nEnter your height rounded to the nearest whole number in meters: ");
-    int height = input.nextInt();
+    System.out.println("\nUSING A SWITCH STATEMENT TO CHECK CONDITIONS:\n");
+    System.out.println("Enter your height rounded to the nearest whole number in meters: ");
+    int height = 0;
+
+    //try-catch block
+    try {
+      height = input.nextInt();
+    } catch (InputMismatchException e) {
+      System.out.println("\nThe value you entered is in invalid format.\n");
+    }
 
     switch (height) {
       case 1:
@@ -55,11 +101,27 @@ public class ExtraRequirements {
         System.out.println("Sorry the value is not within the set ranges");
     }
 
-    System.out.println("\nInput first word:");
+    System.out.println("\nCOMPARING STRINGS LEXICOGRAPHICAL:\n");
+    System.out.println("Input first word:");
     input.nextLine();
-    String str1 = input.nextLine();
+    String str1 = null;
+
+    //try-catch block
+    try {
+      str1 = input.nextLine();
+    } catch (InputMismatchException e) {
+      System.out.println("\nThe value you entered is in invalid format.\n");
+    }
+
     System.out.println("Input second word:");
-    String str2 = input.nextLine();
+    String str2 = null;
+
+    //try-catch block
+    try {
+      str2 = input.nextLine();
+    } catch (InputMismatchException e) {
+      System.out.println("\nThe value you entered is in invalid format.\n");
+    }
 
     // comparing str1 and str2
     int result = str1.compareTo(str2);
@@ -82,16 +144,30 @@ public class ExtraRequirements {
      *For that reason we will use equals(), which is a method available in the String class 
      *that is used to compare two strings and determine whether they are equal.
      **/
+    System.out.println("\nCHECKING IF TWO STRINGS ARE EQUAL:");
+    System.out.println("Input first word:");
+    String text1 = null;
 
-    System.out.println("\nInput first word:");
-    String text1 = input.nextLine();
+    //try-catch block
+    try {
+      text1 = input.nextLine();
+    } catch (InputMismatchException e) {
+      System.out.println("\nThe value you entered is in invalid format.\n");
+    }
+
     System.out.println("Input second word:");
-    String text2 = input.nextLine();
+    String text2 = null;
+
+    //try-catch block
+    try {
+      text2 = input.nextLine();
+    } catch (InputMismatchException e) {
+      System.out.println("\nThe value you entered is in invalid format.\n");
+    }
 
     if (text1.equals(text2)) {
       System.out.println("The two strings are equal.");
-    }
-    else {
+    } else {
       System.out.println("The two strings are not equal\n");
     }
 
@@ -122,10 +198,8 @@ public class ExtraRequirements {
         + "The program exits the loop when the counter value is equal to 10"
         + "\n(Notice that there are some numbers missing)");
 
-    for (int i = 1; i < 10; i++)
-    {
-      if (i >= 4 && i <= 6)
-      {
+    for (int i = 1; i < 10; i++) {
+      if (i >= 4 && i <= 6) {
         continue;
       }
       System.out.println(i);

@@ -19,7 +19,19 @@ public class Car extends Vehicle {
   private int year;
   private String model;
   
-  /* A constructor with three parameters*/
+  /* The constructor sets values for the parameters
+   * from the user's input */
+  /**A constructor with three parameters. 
+   * 
+   * @param manufacturer
+   * First parameter
+   * 
+   * @param model
+   * Second parameter
+   * 
+   * @param year
+   * Third parameter
+   */
   public Car(String manufacturer, String model, int year) {
     super(manufacturer);
     this.year = year;
@@ -35,6 +47,9 @@ public class Car extends Vehicle {
     return year;
   }
   
+  /**
+   * This method prints out the car details.
+   */
   public void carDetails() {
     System.out.printf("%s%10s%15s\n\n", "Manufacturer", "Model", "Year");
     System.out.println(super.getManufacturer() + "\t\t" + getModel() + "\t\t" + getYear());
